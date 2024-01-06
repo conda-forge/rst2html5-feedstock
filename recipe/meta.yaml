@@ -1,5 +1,5 @@
 {% set name = "rst2html5" %}
-{% set version = "2.0" %}
+{% set version = "2.0.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/rst2html5-{{ version }}.tar.gz
-  sha256: 1238e36bf7e6eb05d37fd62d8c2619b0d0c1f17e6802dc8fa1422c6050ee65f7
+  sha256: 309998c85fab028f2fcb01a2ccdc886db0afc4398262e795a02ea9c4d0f32ae9
 
 build:
   number: 0
