@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/rst2html5-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/rst2html5-{{ version }}.tar.gz
   sha256: 309998c85fab028f2fcb01a2ccdc886db0afc4398262e795a02ea9c4d0f32ae9
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - rst2html5 = rst2html5_:main
@@ -21,12 +21,12 @@ requirements:
   host:
     - pip
     - poetry
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - docutils >=0.13.1
     - genshi >=0.7
     - pygments >=2.5
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -36,6 +36,7 @@ test:
     - rst2html5 --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://foss.heptapod.net/doc-utils/rst2html5
