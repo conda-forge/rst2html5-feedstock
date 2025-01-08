@@ -20,10 +20,10 @@ build:
 requirements:
   host:
     - pip
-    - poetry
+    - poetry-core >=1.0.0
     - python {{ python_min }}
   run:
-    - docutils >=0.13.1
+    - docutils
     - genshi >=0.7
     - pygments >=2.5
     - python >={{ python_min }}
